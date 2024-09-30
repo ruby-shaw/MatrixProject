@@ -8,7 +8,7 @@ public class PlayConnections
 				// fillBoard - two + separate boards
 				//has to have shuffle and deselect function
 				// user selects space by letter and number
-
+				//make sure shuffle does not fill filled spaces
 			}
 
 	}
