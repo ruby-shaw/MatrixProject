@@ -1,4 +1,6 @@
 //testing from school: HIIIIIIIIII
+
+//from home: helooooo
 public class PlayConnections
 	{
 
@@ -9,6 +11,7 @@ public class PlayConnections
 				//has to have shuffle and deselect function
 				// user selects space by letter and number
 				//make sure shuffle does not fill filled spaces
+			System.out.println("Hello");
 			}
 
 	}
