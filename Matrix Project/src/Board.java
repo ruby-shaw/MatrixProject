@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Board
 	{
@@ -38,57 +40,74 @@ public class Board
 			
 		}
 		
-		public static void shuffleBoard()
+		public static void shuffleBoard1()
 			{
 				String [] [] board1 = new String [4][4]; 
 				
+				board1  [0][0] = "Import";
+				board1  [0][1] = "Thing";
+				board1  [0][2] = "Gravity";
+				board1  [0][3] = "Start";
 				
-				for (int r = 0; r < board1.length; r++)
+				board1  [1][0] = "Bank";
+				board1  [1][1] = "Trade";
+				board1  [1][2] = "Matrix";
+				board1  [1][3] = "Dune";
+				
+				board1  [2][0] = "Weight";
+				board1  [2][1] = "Abyss";
+				board1  [2][2] = "Draft";
+				board1  [2][3] = "Mound";
+				
+				board1  [3][0] = "Hill";
+				board1  [3][1] = "Bench";
+				board1  [3][2] = "Fly";
+				board1  [3][3] = "Substance";
+
+				
+				
+				System.out.println("         1    |    2    |    3    |    4   ");
+				System.out.println("____________________________________________");
+				System.out.println(" A  |  " + board1 [0][0] + " | " + board1 [0][1] + " | " + board1 [0][2] + " | " + board1 [0][3] + " | " );
+				System.out.println(" B  |  " + board1 [1][0] + " | " + board1 [1][1] + " | " + board1 [1][2] + " | " + board1 [1][3] + " | " );
+				System.out.println(" C  |  " + board1 [2][0] + " | " + board1 [2][1] + " | " + board1 [2][2] + " | " + board1 [2][3] + " | " );
+				System.out.println(" D  |  " + board1 [3][0] + " | " + board1 [3][1] + " | " + board1 [3][2] + " | " + board1 [3][3] + " | " );
+				System.out.println("____________________________________________");
+				
+				 ArrayList<String> shuffled = new ArrayList<>();
+				 ArrayList<String> shuffledBoard = new ArrayList<>();
+				
+				//convert matrix into an array
+				
+				for (int row = 0; row < board1.length; row ++)
 					{
-						for (int c = 0; c < board1[0].length; c++)
+						for (int col = 0; col < board1[0].length; col ++)
 							{
-								int row = (int)((Math.random( )*4 ) );
-								int col = (int)((Math.random()*4) );
+									shuffled.add( board1[row][col]);
 							}
 					}
 				
+				Collections.shuffle(shuffled);
+				shuffledBoard = shuffled; 
+				
+				for (int r = 0; r < 4; r++)
+					{
+						for (int c = 0; c < 4; c++)
+							{
+								board1[r][c] = shuffledBoard.get(r * 4 + c);
+							}
+					}
+			
+				System.out.println("         1    |    2    |    3    |    4   ");
+				System.out.println("____________________________________________");
+				System.out.println(" A  |  " + board1 [0][0] + " | " + board1 [0][1] + " | " + board1 [0][2] + " | " + board1 [0][3] + " | " );
+				System.out.println(" B  |  " + board1 [1][0] + " | " + board1 [1][1] + " | " + board1 [1][2] + " | " + board1 [1][3] + " | " );
+				System.out.println(" C  |  " + board1 [2][0] + " | " + board1 [2][1] + " | " + board1 [2][2] + " | " + board1 [2][3] + " | " );
+				System.out.println(" D  |  " + board1 [3][0] + " | " + board1 [3][1] + " | " + board1 [3][2] + " | " + board1 [3][3] + " | " );
+				System.out.println("____________________________________________");
 				
 				
-//				board1  [row][col] = "Import";
-//				board1  [row][col] = "Thing";
-//				board1  [row][col] = "Gravity";
-//				board1  [row][col] = "Start";
-//				
-//				board1  [row][col] = "Bank";
-//				board1  [row][col] = "Trade";
-//				board1  [row][col] = "Matrix";
-//				board1  [row][col] = "Dune";
-//				
-//				board1  [row][col] = "Weight";
-//				board1  [row][col] = "Abyss";
-//				board1  [row][col] = "Draft";
-//				board1  [row][col] = "Mound";
-//				
-//				board1  [row][col] = "Hill";
-//				board1   [row][col] = "Bench";
-//				board1  [row][col] = "Fly";
-//				board1  [row][col] = "Substance";
-//				
-//				System.out.println("         1    |    2    |    3    |    4   ");
-//				System.out.println("____________________________________________");
-//				System.out.println(" A  |  " + board1  [row][col] + " | " + board1  [row][col] + " | " +board1  [row][col] + " | " + board1  [row][col] + " | " );
-//				System.out.println(" B  |  " + board1  [row][col] + " | " +board1  [row][col] + " | " +board1  [row][col] + " | " +board1  [row][col] + " | " );
-//				System.out.println(" C  |  " + board1  [row][col] + " | " +board1  [row][col] + " | " +board1  [row][col] + " | " +board1  [row][col] + " | " );
-//				System.out.println(" D  |  " +board1  [row][col]+ " | " +board1  [row][col] + " | " + board1  [row][col] + " | " +board1  [row][col] + " | " );
-//				System.out.println("____________________________________________");
 			}
-		
-		
-		
-		
-		
-		
-		
 		
 		public static void makeBoard2()
 		{

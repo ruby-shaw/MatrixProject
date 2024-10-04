@@ -11,9 +11,11 @@ public class PlayConnections
 				
 				// create Board -> 4x4 Matrix
 				// fillBoard - two + separate boards
-				//has to have shuffle and deselect function
-				// user selects space by letter and number
+				//has to have shuffle  function at any time
+				// user selects space by letter and number??
 				//make sure shuffle does not fill filled spaces
+				
+				//Next step: allow user to input guess + evaluate guess
 			}
 		
 		public static void instructions()
@@ -39,11 +41,13 @@ public class PlayConnections
 		{
 			Scanner userInput = new Scanner(System.in); 		
 			String userGuess = userInput.nextLine();
+			userGuess.toLowerCase();
 			
 			if (userGuess.equals("shuffle"))
 				{
-					Board.shuffleBoard();
+//					Board.shuffleBoard1();
 				}
+			
 			
 			
 			//Area of high ground
