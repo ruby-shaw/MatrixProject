@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
+import java.util.Comparator;
 
 public class Board
 	{
@@ -109,6 +111,99 @@ public class Board
 				
 			}
 		
+		public static void correctBoard1()
+			{
+				
+	String [] [] correct1 = new String [4][4];
+
+	String areaTheme = "Theme : Area of high ground";
+				
+	correct1  [0][0] = "bank";
+	correct1  [0][1] = "dune";
+	correct1  [0][2] = "hill";
+	correct1  [0][3] = "mound";
+
+	String significanceTheme = "Theme : Significance";
+				
+	correct1  [1][0] = "gravity";
+	correct1  [1][1] = "import";
+	correct1  [1][2] = "substance";
+	correct1  [1][3] = "weight";
+
+	String actionsTheme = "Theme : Actions in fantasy sports";
+				
+	correct1  [2][0] = "bench";
+	correct1  [2][1] = "draft";
+	correct1  [2][2] = "start";
+	correct1  [2][3] = "trade";
+
+	String scifiTheme = "Theme : Sci-fi movies with 'The'";
+				
+	correct1  [3][0] = "abyss";
+	correct1  [3][1] = "fly";
+	correct1  [3][2] = "matrix";
+	correct1  [3][3] = "thing";
+
+				
+				
+				System.out.println("  1  |  2  |  3  |  4 ");
+				System.out.println("__________________________________________________________________________________________________________");
+				System.out.println(" A  |  " + correct1 [0][0] + " | " + correct1 [0][1] + " | " + correct1 [0][2] + " | " + correct1 [0][3] + " | " );
+				System.out.println(" B  |  " + correct1 [1][0] + "    | " + correct1 [1][1] + " | " + correct1 [1][2] + " | " + correct1 [1][3] + " | " );
+				System.out.println(" C  |  " + correct1 [2][0] + " | " + correct1 [2][1] + " | " + correct1 [2][2] + " | " + correct1 [2][3] + " | " );
+				System.out.println(" D  |  " + correct1 [3][0] + " | " + correct1 [3][1] + " | " + correct1 [3][2] + " | " + correct1 [3][3] + " | " );
+				System.out.println("____________________________________________________________");
+				
+				
+				
+				// take userInput and compare to correct answer
+				// counter for mistakes
+				// compare by row
+				//end game if its not right
+				// figure out how to call on variables in different classes?
+				
+				
+				Scanner userInput = new Scanner(System.in); 		
+				String userGuess = userInput.nextLine();
+				userGuess.toLowerCase();
+				
+				ArrayList<String> correct = new ArrayList<>();
+				ArrayList<String> correctedBoard = new ArrayList<>();
+				
+				ArrayList<String> correctedRow1 = new ArrayList<>();
+				ArrayList<String> correctedRow2 = new ArrayList<>();
+				ArrayList<String> correctedRow3 = new ArrayList<>();
+				ArrayList<String> correctedRow4 = new ArrayList<>();
+				
+				
+				for (int r = 0; r < correct1.length; r++)
+					{
+						for (int c = 0; c < correct1[0].length; c++ )
+							{
+								correct.add(correct1[r][c]);
+							}
+					}
+				
+				
+				Collections.sort(correct, Comparator.comparingInt(String::length));
+				correct = correctedBoard; 
+				
+				
+				for (int i =0; i <= 4; i++)
+					{
+//						userBoard.add(userGuess);
+					}
+				
+				for (int r = 0; r < 4; r++)
+					{
+						for (int c = 0; c < 4; c++)
+							{
+//								board1[r][c] = shuffledBoard.get(r * 4 + c);
+							}
+					}
+				
+			}
+		
 		public static void makeBoard2()
 		{
 			
@@ -144,50 +239,6 @@ String [] [] board2 = new String [4][4];
 			System.out.println(" D  |  " + board2 [3][0] + " | " + board2 [3][1] + " | " + board2 [3][2] + " | " + board2 [3][3] + " | " );
 			System.out.println("________________");
 			
-		}
-		
-		public static void correctBoard1()
-		{
-			
-String [] [] correctBoard1 = new String [4][4];
-
-String areaTheme = "Theme : Area of high ground";
-			
-correctBoard1  [0][0] = "Bank";
-correctBoard1  [0][1] = "Dune";
-correctBoard1  [0][2] = "Hill";
-correctBoard1  [0][3] = "Mound";
-
-String significanceTheme = "Theme : Significance";
-			
-correctBoard1  [1][0] = "Gravity";
-correctBoard1  [1][1] = "Import";
-correctBoard1  [1][2] = "Substance";
-correctBoard1  [1][3] = "Weight";
-
-String actionsTheme = "Theme : Actions in fantasy sports";
-			
-correctBoard1  [2][0] = "Bench";
-correctBoard1  [2][1] = "Draft";
-correctBoard1  [2][2] = "Start";
-correctBoard1  [2][3] = "Trade";
-
-String scifiTheme = "Theme : Sci-fi movies with 'The'";
-			
-correctBoard1  [3][0] = "Abyss";
-correctBoard1  [3][1] = "Fly";
-correctBoard1  [3][2] = "Matrix";
-correctBoard1  [3][3] = "Thing";
-
-			
-			
-			System.out.println("  1  |  2  |  3  |  4 ");
-			System.out.println("__________________________________________________________________________________________________________");
-			System.out.println(" A  |  " + correctBoard1 [0][0] + " | " + correctBoard1 [0][1] + " | " + correctBoard1 [0][2] + " | " + correctBoard1 [0][3] + " | " );
-			System.out.println(" B  |  " + correctBoard1 [1][0] + "    | " + correctBoard1 [1][1] + " | " + correctBoard1 [1][2] + " | " + correctBoard1 [1][3] + " | " );
-			System.out.println(" C  |  " + correctBoard1 [2][0] + " | " + correctBoard1 [2][1] + " | " + correctBoard1 [2][2] + " | " + correctBoard1 [2][3] + " | " );
-			System.out.println(" D  |  " + correctBoard1 [3][0] + " | " + correctBoard1 [3][1] + " | " + correctBoard1 [3][2] + " | " + correctBoard1 [3][3] + " | " );
-			System.out.println("____________________________________________________________");
 		}
 		
 		public static void correctBoard2()

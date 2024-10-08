@@ -33,6 +33,7 @@ public class PlayConnections
 				}
 			else
 				{
+					System.out.println("Let's play!");
 					activePlay();
 				}
 		}
@@ -43,18 +44,17 @@ public class PlayConnections
 			String userGuess = userInput.nextLine();
 			userGuess.toLowerCase();
 			
+			boolean isWon = false; 
+
+			
 			if (userGuess.equals("shuffle"))
 				{
-//					Board.shuffleBoard1();
+					Board.shuffleBoard1();
 				}
-			
-			
-			
-			//Area of high ground
-			
-			// user inputs 1 word at a time, output happens after 4 words
-			// right answer has to be in any order
-			// 
+			else if(userGuess.equals("A1"))
+				{
+					
+				}
 		}
 		
 		
