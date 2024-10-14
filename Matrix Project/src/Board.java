@@ -108,7 +108,7 @@ public class Board
 				System.out.println(" D  |  " + board1 [3][0] + " | " + board1 [3][1] + " | " + board1 [3][2] + " | " + board1 [3][3] + " | " );
 				System.out.println("____________________________________________");
 				
-				
+				PlayConnections.activePlay();
 			}
 		
 		public static void correctBoard1()
@@ -149,7 +149,7 @@ public class Board
 				System.out.println("  1  |  2  |  3  |  4 ");
 				System.out.println("__________________________________________________________________________________________________________");
 				System.out.println(" A  |  " + correct1 [0][0] + " | " + correct1 [0][1] + " | " + correct1 [0][2] + " | " + correct1 [0][3] + " | " );
-				System.out.println(" B  |  " + correct1 [1][0] + "    | " + correct1 [1][1] + " | " + correct1 [1][2] + " | " + correct1 [1][3] + " | " );
+				System.out.println(" B  |  " + correct1 [1][0] + "  | " + correct1 [1][1] + " | " + correct1 [1][2] + " | " + correct1 [1][3] + " | " );
 				System.out.println(" C  |  " + correct1 [2][0] + " | " + correct1 [2][1] + " | " + correct1 [2][2] + " | " + correct1 [2][3] + " | " );
 				System.out.println(" D  |  " + correct1 [3][0] + " | " + correct1 [3][1] + " | " + correct1 [3][2] + " | " + correct1 [3][3] + " | " );
 				System.out.println("____________________________________________________________");
@@ -163,17 +163,17 @@ public class Board
 				// figure out how to call on variables in different classes?
 				
 				
-				Scanner userInput = new Scanner(System.in); 		
+				Scanner userInput = new Scanner(System.in);
 				String userGuess = userInput.nextLine();
 				userGuess.toLowerCase();
 				
 				ArrayList<String> correct = new ArrayList<>();
-				ArrayList<String> correctedBoard = new ArrayList<>();
+				ArrayList<String> sortedBoard = new ArrayList<>();
 				
-				ArrayList<String> correctedRow1 = new ArrayList<>();
-				ArrayList<String> correctedRow2 = new ArrayList<>();
-				ArrayList<String> correctedRow3 = new ArrayList<>();
-				ArrayList<String> correctedRow4 = new ArrayList<>();
+				ArrayList<String> sortedBoard1 = new ArrayList<>();
+				ArrayList<String> sortedBoard2 = new ArrayList<>();
+				ArrayList<String> sortedBoard3 = new ArrayList<>();
+				ArrayList<String> sortedBoard4 = new ArrayList<>();
 				
 				
 				for (int r = 0; r < correct1.length; r++)
@@ -185,22 +185,26 @@ public class Board
 					}
 				
 				
-				Collections.sort(correct, Comparator.comparingInt(String::length));
-				correct = correctedBoard; 
+				Collections.sort(correct);
+				
+//				correct, Comparator.comparingInt(String::length)
+				correct = sortedBoard; 
+				
+				System.out.println(sortedBoard);
 				
 				
-				for (int i =0; i <= 4; i++)
-					{
-//						userBoard.add(userGuess);
-					}
-				
-				for (int r = 0; r < 4; r++)
-					{
-						for (int c = 0; c < 4; c++)
-							{
-//								board1[r][c] = shuffledBoard.get(r * 4 + c);
-							}
-					}
+//				for (int i =0; i <= 4; i++)
+//					{
+////						userBoard.add(userGuess);
+//					}
+//				
+//				for (int r = 0; r < 4; r++)
+//					{
+//						for (int c = 0; c < 4; c++)
+//							{
+////								board1[r][c] = shuffledBoard.get(r * 4 + c);
+//							}
+//					}
 				
 			}
 		

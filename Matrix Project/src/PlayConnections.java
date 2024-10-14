@@ -3,6 +3,36 @@ import java.util.Scanner;
 
 public class PlayConnections
 	{
+		static String [] [] correct1 = new String [4][4];
+
+		static String areaTheme = "Theme : Area of high ground";
+					
+		correct1  [0][0] = "bank";
+		correct1  [0][1] = "dune";
+		correct1  [0][2] = "hill";
+		correct1  [0][3] = "mound";
+
+		static String significanceTheme = "Theme : Significance";
+					
+		correct1  [1][0] = "gravity";
+		correct1  [1][1] = "import";
+		correct1  [1][2] = "substance";
+		correct1  [1][3] = "weight";
+
+		static String actionsTheme = "Theme : Actions in fantasy sports";
+					
+		correct1  [2][0] = "bench";
+		correct1  [2][1] = "draft";
+		correct1  [2][2] = "start";
+		correct1  [2][3] = "trade";
+
+		static String scifiTheme = "Theme : Sci-fi movies with 'The'";
+					
+		correct1  [3][0] = "abyss";
+		correct1  [3][1] = "fly";
+		correct1  [3][2] = "matrix";
+		correct1  [3][3] = "thing";
+
 
 		public static void main(String[] args)
 			{
@@ -45,15 +75,20 @@ public class PlayConnections
 			userGuess.toLowerCase();
 			
 			boolean isWon = false; 
+			
 
 			
 			if (userGuess.equals("shuffle"))
 				{
 					Board.shuffleBoard1();
 				}
-			else if(userGuess.equals("A1"))
+//			else if(userGuess.equals("A1"))
+//				{
+//					
+//				}
+			else if(userGuess.equals("answer"));
 				{
-					
+					Board.correctBoard1();
 				}
 		}
 		
