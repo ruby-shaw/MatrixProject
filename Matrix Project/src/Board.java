@@ -111,102 +111,102 @@ public class Board
 				PlayConnections.activePlay();
 			}
 		
-		public static void correctBoard1()
-			{
-				
-	String [] [] correct1 = new String [4][4];
-
-	String areaTheme = "Theme : Area of high ground";
-				
-	correct1  [0][0] = "bank";
-	correct1  [0][1] = "dune";
-	correct1  [0][2] = "hill";
-	correct1  [0][3] = "mound";
-
-	String significanceTheme = "Theme : Significance";
-				
-	correct1  [1][0] = "gravity";
-	correct1  [1][1] = "import";
-	correct1  [1][2] = "substance";
-	correct1  [1][3] = "weight";
-
-	String actionsTheme = "Theme : Actions in fantasy sports";
-				
-	correct1  [2][0] = "bench";
-	correct1  [2][1] = "draft";
-	correct1  [2][2] = "start";
-	correct1  [2][3] = "trade";
-
-	String scifiTheme = "Theme : Sci-fi movies with 'The'";
-				
-	correct1  [3][0] = "abyss";
-	correct1  [3][1] = "fly";
-	correct1  [3][2] = "matrix";
-	correct1  [3][3] = "thing";
-
-				
-				
-				System.out.println("  1  |  2  |  3  |  4 ");
-				System.out.println("__________________________________________________________________________________________________________");
-				System.out.println(" A  |  " + correct1 [0][0] + " | " + correct1 [0][1] + " | " + correct1 [0][2] + " | " + correct1 [0][3] + " | " );
-				System.out.println(" B  |  " + correct1 [1][0] + "  | " + correct1 [1][1] + " | " + correct1 [1][2] + " | " + correct1 [1][3] + " | " );
-				System.out.println(" C  |  " + correct1 [2][0] + " | " + correct1 [2][1] + " | " + correct1 [2][2] + " | " + correct1 [2][3] + " | " );
-				System.out.println(" D  |  " + correct1 [3][0] + " | " + correct1 [3][1] + " | " + correct1 [3][2] + " | " + correct1 [3][3] + " | " );
-				System.out.println("____________________________________________________________");
-				
-				
-				
-				// take userInput and compare to correct answer
-				// counter for mistakes
-				// compare by row
-				//end game if its not right
-				// figure out how to call on variables in different classes?
-				
-				
-				Scanner userInput = new Scanner(System.in);
-				String userGuess = userInput.nextLine();
-				userGuess.toLowerCase();
-				
-				ArrayList<String> correct = new ArrayList<>();
-				ArrayList<String> sortedBoard = new ArrayList<>();
-				
-				ArrayList<String> sortedBoard1 = new ArrayList<>();
-				ArrayList<String> sortedBoard2 = new ArrayList<>();
-				ArrayList<String> sortedBoard3 = new ArrayList<>();
-				ArrayList<String> sortedBoard4 = new ArrayList<>();
-				
-				
-				for (int r = 0; r < correct1.length; r++)
-					{
-						for (int c = 0; c < correct1[0].length; c++ )
-							{
-								correct.add(correct1[r][c]);
-							}
-					}
-				
-				
-				Collections.sort(correct);
-				
-//				correct, Comparator.comparingInt(String::length)
-				correct = sortedBoard; 
-				
-				System.out.println(sortedBoard);
-				
-				
-//				for (int i =0; i <= 4; i++)
-//					{
-////						userBoard.add(userGuess);
-//					}
+//		public static void correctBoard1()
+//			{
 //				
-//				for (int r = 0; r < 4; r++)
+//	String [] [] correct1 = new String [4][4];
+//
+//	String areaTheme = "Theme : Area of high ground";
+//				
+//	correct1  [0][0] = "bank";
+//	correct1  [0][1] = "dune";
+//	correct1  [0][2] = "hill";
+//	correct1  [0][3] = "mound";
+//
+//	String significanceTheme = "Theme : Significance";
+//				
+//	correct1  [1][0] = "gravity";
+//	correct1  [1][1] = "import";
+//	correct1  [1][2] = "substance";
+//	correct1  [1][3] = "weight";
+//
+//	String actionsTheme = "Theme : Actions in fantasy sports";
+//				
+//	correct1  [2][0] = "bench";
+//	correct1  [2][1] = "draft";
+//	correct1  [2][2] = "start";
+//	correct1  [2][3] = "trade";
+//
+//	String scifiTheme = "Theme : Sci-fi movies with 'The'";
+//				
+//	correct1  [3][0] = "abyss";
+//	correct1  [3][1] = "fly";
+//	correct1  [3][2] = "matrix";
+//	correct1  [3][3] = "thing";
+//
+//				
+//				
+//				System.out.println("  1  |  2  |  3  |  4 ");
+//				System.out.println("__________________________________________________________________________________________________________");
+//				System.out.println(" A  |  " + correct1 [0][0] + " | " + correct1 [0][1] + " | " + correct1 [0][2] + " | " + correct1 [0][3] + " | " );
+//				System.out.println(" B  |  " + correct1 [1][0] + "  | " + correct1 [1][1] + " | " + correct1 [1][2] + " | " + correct1 [1][3] + " | " );
+//				System.out.println(" C  |  " + correct1 [2][0] + " | " + correct1 [2][1] + " | " + correct1 [2][2] + " | " + correct1 [2][3] + " | " );
+//				System.out.println(" D  |  " + correct1 [3][0] + " | " + correct1 [3][1] + " | " + correct1 [3][2] + " | " + correct1 [3][3] + " | " );
+//				System.out.println("____________________________________________________________");
+//				
+//				
+//				
+//				// take userInput and compare to correct answer
+//				// counter for mistakes
+//				// compare by row
+//				//end game if its not right
+//				// figure out how to call on variables in different classes?
+//				
+//				
+//				Scanner userInput = new Scanner(System.in);
+//				String userGuess = userInput.nextLine();
+//				userGuess.toLowerCase();
+//				
+//				ArrayList<String> correct = new ArrayList<>();
+//				ArrayList<String> sortedBoard = new ArrayList<>();
+//				
+//				ArrayList<String> sortedBoard1 = new ArrayList<>();
+//				ArrayList<String> sortedBoard2 = new ArrayList<>();
+//				ArrayList<String> sortedBoard3 = new ArrayList<>();
+//				ArrayList<String> sortedBoard4 = new ArrayList<>();
+//				
+//				
+//				for (int r = 0; r < correct1.length; r++)
 //					{
-//						for (int c = 0; c < 4; c++)
+//						for (int c = 0; c < correct1[0].length; c++ )
 //							{
-////								board1[r][c] = shuffledBoard.get(r * 4 + c);
+//								correct.add(correct1[r][c]);
 //							}
 //					}
-				
-			}
+//				
+//				
+//				Collections.sort(correct);
+//				
+////				correct, Comparator.comparingInt(String::length)
+//				correct = sortedBoard; 
+//				
+//				System.out.println(sortedBoard);
+//				
+//				
+////				for (int i =0; i <= 4; i++)
+////					{
+//////						userBoard.add(userGuess);
+////					}
+////				
+////				for (int r = 0; r < 4; r++)
+////					{
+////						for (int c = 0; c < 4; c++)
+////							{
+//////								board1[r][c] = shuffledBoard.get(r * 4 + c);
+////							}
+////					}
+//				
+//			}
 		
 		public static void makeBoard2()
 		{
